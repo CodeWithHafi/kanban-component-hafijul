@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+Kanban Board Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Storybook
 
-Currently, two official plugins are available:
+[Your Deployed Storybook URL]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation
 
-## React Compiler
+# Clone the repository
+git clone [https://github.com/YOUR_USERNAME/kanban-component-hafijul.git](https://github.com/YOUR_USERNAME/kanban-component-hafijul.git)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Run the Storybook
+npm run storybook
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Architecture
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This project implements a fully accessible, high-performance Kanban board component from scratch. The UI is built with React, TypeScript, and Tailwind CSS. Global state, including task and column data, is managed by Zustand. Drag-and-drop functionality is implemented using the low-level primitives from @dnd-kit/core, allowing for a completely custom and optimized user experience. Performance for large datasets is handled by @tanstack/react-virtual.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+[ ] Drag-and-drop tasks between columns
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[ ] Task creation/editing modal
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[ ] Responsive design for mobile, tablet, and desktop
+
+[ ] Keyboard accessibility (WCAG 2.1)
+
+[ ] Virtualized task lists for large datasets (500+ tasks)
+
+[ ] Search and filter tasks
+
+[ ] Dark Mode (Bonus)
+
+Storybook Stories
+
+Default: Standard 4-column board with sample tasks.
+
+Empty State: Board with columns but no tasks.
+
+Large Dataset: Board with 30+ tasks to demonstrate virtualization.
+
+Mobile View: Board viewed at a mobile breakpoint.
+
+Interactive Playground: Fully functional board with Storybook controls.
+
+Technologies
+
+React 18 + TypeScript
+
+Tailwind CSS
+
+Zustand (State Management)
+
+@dnd-kit/core (Drag & Drop)
+
+Storybook (Component Workshop)
+
+@tanstack/react-virtual (Performance)
+
+Contact
+
+hafijulislam1207@gmail.com
